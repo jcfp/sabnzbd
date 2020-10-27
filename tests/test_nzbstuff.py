@@ -68,8 +68,8 @@ class TestNZBStuffHelpers:
             ("/Jobname", "/Jobname", None),  # Slash at start
             ("Jobname/Top{{Secret}}", "Jobname", "Top{{Secret}}"),  # Slash with braces
             ("Jobname / Top{{Secret}}", "Jobname", "Top{{Secret}}"),  # Slash with braces and extra spaces
-            ("לינוקס/معلومات سرية", "לינוקס", "معلومات سرية"),  # LTR with slash
-            ("לינוקס{{معلومات سرية}}", "לינוקס", "معلومات سرية"),  # LTR with brackets
+            ("לינוקס/معلومات سرية", "לינוקס", "معلومات سرية"),  # RTL with slash
+            ("לינוקס{{معلومات سرية}}", "לינוקס", "معلومات سرية"),  # RTL with brackets
             ("thư điện tử password=mật_khẩu", "thư điện tử", "mật_khẩu"),  # Password= notation
             ("password=PartOfTheJobname", "password=PartOfTheJobname", None),  # Password= at the start
             ("Job}}Name{{FTW", "Job}}Name{{FTW", None),  # Both {{ and }} present but incorrect order (no password)
